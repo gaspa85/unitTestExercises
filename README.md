@@ -20,3 +20,35 @@ dalle specifiche appena descritto
 qualora non si finisca oggi portarlo avanti nel tempo da qui e conclusione corsi
 in caso si tagga sul repositori e si fa code review su codice
 più che tecniche più scenari di comprensione
+
+
+
+
+
+
+#Specifica dettagliata
+
+Vogliamo gestire l'inserimento e la lettura di un prodotto a una certa data.
+
+Il prodotto ha come informazioni basilari quelle elementari come:
+
+Nome
+Data di scadenza (opzionale)
+Codice EAN
+Le caratteristiche del prodotto principali sono:
+
+Prezzo, sempre presente e con un range di date. Il range ha sempre una data di inizio e di fine ed è sempre presente.
+
+
+
+Sconto, opzionale.
+
+Lo sconto ha un range di date sempre presente e a scaglioni di 5 punti.
+
+Da 5% a 50%.
+
+
+
+
+
+Implementare il codice in modalità TDD (partendo dai test).
