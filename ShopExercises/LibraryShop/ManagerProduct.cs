@@ -9,12 +9,12 @@ public class ManagerProduct : IManagerProduct
         throw new NotImplementedException();
     }
 
-    List<Product> IManagerProduct.getProductAll(Guid idProduct)
+    public List<Product> getProductAll(Guid idProduct)
     {
         throw new NotImplementedException();
     }
 
-    Product IManagerProduct.getProductByTime(Guid idProduct, DateTime articleTime)
+    public Product getProductByTime(Guid idProduct, DateTime articleTime)
     {
         throw new NotImplementedException();
     }
