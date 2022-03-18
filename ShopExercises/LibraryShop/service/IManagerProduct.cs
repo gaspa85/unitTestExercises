@@ -10,5 +10,5 @@ public interface IManagerProduct
 
     public Task<OperationResult<ProductState>> getProductState(Guid idProduct, DateTime articleTime);
 
-    public Task<OperationResult<Product>> getProduct(Guid idProduct);
+    public Task<OperationResult<ProductHistory>> getProduct(Guid idProduct);
 }

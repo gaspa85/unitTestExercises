@@ -1,6 +1,6 @@
 ﻿namespace dbshop.businessModel;
 
-public class TimeRangeEntity
+public class TimeRangeDTO
 {
     //TODO
     /*    public DateTime Start { get; set; }

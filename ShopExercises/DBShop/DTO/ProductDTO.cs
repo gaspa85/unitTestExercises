@@ -1,6 +1,6 @@
 ﻿namespace dbshop.businessModel;
 
-public class ProductEntity
+public class ProductDTO
 {
     //TODO
     //public Guid Id { get; set; }

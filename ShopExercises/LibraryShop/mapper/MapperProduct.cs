@@ -2,7 +2,7 @@
 
 public class MapperProduct
 {
-    public ProductEntity toEntity(this Product p)
+    public ProductDTO toDTO(this Product p)
     {
 
     }

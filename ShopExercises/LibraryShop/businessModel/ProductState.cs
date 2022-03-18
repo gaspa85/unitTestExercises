@@ -7,12 +7,9 @@ public class ProductState
         DateTime? Expire,
         float Price,
         string Ean,
-        DateTime Start,
-        DateTime End,
         DiscountEnum Discounts = DiscountEnum.no_d
         )
     {
-        this.Id = Guid.NewGuid();
         this.Name = Name;
         this.Expire = Expire;
         this.Price = Price;
@@ -20,10 +17,10 @@ public class ProductState
         this.Ean = Ean;
     }
 
-    public Guid Id { get; }
+    public Guid Id { get; } = Guid.NewGuid();
+
     public string Name { get; }
     public DateTime? Expire { get; } = null!;
-
     public float Price { get; }
     public DiscountEnum Discounts { get; } = DiscountEnum.no_d;
     public string Ean { get; }

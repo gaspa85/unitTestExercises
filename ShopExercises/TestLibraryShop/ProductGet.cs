@@ -14,7 +14,7 @@ public class ProductGet
     public void getProductState()
     {
         //setup
-        var p = new Product();
+        var p = new ProductHistory();
         var sd = new DateTime(2022, 01, 15);
         var ed = new DateTime(2022, 01, 20);
         //TODO insert product and productstate to low level
@@ -37,7 +37,7 @@ public class ProductGet
     public void getProductState_NoFindReturnNULL()
     {
         //setup
-        var p = new Product();
+        var p = new ProductHistory();
         var sd = new DateTime(2022, 01, 15);
         var ed = new DateTime(2022, 01, 20);
 
@@ -62,7 +62,7 @@ public class ProductGet
     public void getProductState_ProductNotExistReturnNULL()
     {
         //setup
-        var p = new Product();
+        var p = new ProductHistory();
 
         var mp = new ManagerProduct();
 
@@ -80,7 +80,7 @@ public class ProductGet
     public void getProductState_BackendException()
     {
         //setup
-        var p = new Product();
+        var p = new ProductHistory();
 
         var mp = new ManagerProduct();
 

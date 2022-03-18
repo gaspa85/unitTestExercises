@@ -2,7 +2,11 @@
 
 public class Product
 {
-    public Guid Id { get; } = Guid.NewGuid();
-    public Dictionary<TimeRange, ProductState> MapProductState { get; set; } = new Dictionary<TimeRange, ProductState>();
+    public Product(ProductState ProductState)
+    {
+        this.ProductState = ProductState;
+    }
 
+    public Guid Id { get; } = Guid.NewGuid();
+    public ProductState ProductState { get; }
 }

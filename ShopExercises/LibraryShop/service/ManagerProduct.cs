@@ -14,7 +14,7 @@ public class ManagerProduct : IManagerProduct
 
     public async Task<Guid> createProduct()
     {
-        var p = new Product();
+        var p = new ProductHistory();
 
         this.db.createProduct(p.toEntity());
 
@@ -26,7 +26,7 @@ public class ManagerProduct : IManagerProduct
         throw new NotImplementedException();
     }
 
-    public async Task<OperationResult<Product>> getProduct(Guid idProduct)
+    public async Task<OperationResult<ProductHistory>> getProduct(Guid idProduct)
     {
         throw new NotImplementedException();
     }

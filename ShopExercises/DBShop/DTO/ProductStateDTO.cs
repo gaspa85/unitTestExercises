@@ -1,6 +1,6 @@
 ﻿namespace dbshop.businessModel;
 
-public class ProductStateEntity
+public class ProductStateDTO
 {
     //TODO
     /* public ProductStateEntity(
