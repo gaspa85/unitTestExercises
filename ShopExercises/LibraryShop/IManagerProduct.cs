@@ -8,7 +8,7 @@ public interface IManagerProduct
 
     public void insertProductState(Guid idProduct, ProductState product);
 
-    public ProductState getProductState(Guid idProduct, DateTime articleTime);
+    public OperationResult<ProductState> getProductState(Guid idProduct, DateTime articleTime);
 
-    public Product getProduct(Guid idProduct);
+    public OperationResult<Product> getProduct(Guid idProduct);
 }

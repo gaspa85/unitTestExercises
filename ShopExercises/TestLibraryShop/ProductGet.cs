@@ -52,11 +52,11 @@ public class ProductGet
 
 
         //assert
-        Assert.Null(ps);
+        Assert.Null(ps.Result);
     }
 
     /// <summary>
-    /// if not find product not exist return null
+    /// if not find product return null
     /// </summary>
     [Fact]
     public void getProductState_ProductNotExistReturnNULL()
@@ -70,16 +70,52 @@ public class ProductGet
         var ps = mp.getProductState(p.Id, new DateTime());
 
         //assert
-        Assert.Null(ps);
+        Assert.Null(ps.Result);
+    }
+
+    /// <summary>
+    /// if there are backend problem for get date return OperationResult with exception
+    /// </summary>
+    [Fact]
+    public void getProductState_BackendException()
+    {
+        //setup
+        var p = new Product();
+
+        var mp = new ManagerProduct();
+
+        //act
+        var ps = mp.getProductState(p.Id, new DateTime());
+
+        //assert
+        Assert.NotNull(ps.Exception);
     }
 
 
 
     /// <summary>
-    /// try to return list of product for specific
+    /// try to return product with list of ProductState
     /// </summary>
     [Fact]
     public void getProduct()
+    {
+        //TODO
+    }
+
+    /// <summary>
+    /// if not find product return null
+    /// </summary>
+    [Fact]
+    public void getProduct_ProductNotFindReturnNull()
+    {
+        //TODO
+    }
+
+    /// <summary>
+    /// if there are some backend error OperationResult retun exception
+    /// </summary>
+    [Fact]
+    public void getProduct_BackendException()
     {
         //TODO
     }
