@@ -6,9 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\DBShop\DBShop.csproj" />
-    <ProjectReference Include="..\Util\Util.csproj" />
-  </ItemGroup>
-
 </Project>
