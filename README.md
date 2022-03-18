@@ -26,7 +26,7 @@ più che tecniche più scenari di comprensione
 
 
 
-##Specifica dettagliata
+## Specifica dettagliata
 
 Vogliamo gestire l'inserimento e la lettura di un prodotto a una certa data.
 
