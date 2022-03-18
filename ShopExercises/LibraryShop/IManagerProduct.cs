@@ -8,5 +8,5 @@ public interface IManagerProduct
 
     public ProductState getProductState(Guid idProduct, DateTime articleTime);
 
-    public List<ProductState> getProductAll(Guid idProduct);
+    public Product getProduct(Guid idProduct);
 }
