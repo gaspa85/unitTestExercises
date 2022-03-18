@@ -1,12 +1,8 @@
 ﻿namespace LibraryShop.businessModel;
 
-public class ProductDiscount : TimeRange
-{
-    public DiscountEnum Discount { get; set; }
-}
-
 public enum DiscountEnum
 {
+    no_d,
     d5,
     d10,
     d15,
