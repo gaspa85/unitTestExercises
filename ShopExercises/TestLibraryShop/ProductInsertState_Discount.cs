@@ -2,7 +2,7 @@
 
 namespace TestLibraryShop;
 
-public class ProductInsert_Discount
+public class ProductInsertState_Discount
 {
     /// <summary>
     /// discount is optional, possible to insert product without discount
@@ -13,12 +13,4 @@ public class ProductInsert_Discount
         //TODO
     }
 
-    /// <summary>
-    /// product with discount MUST have rande date
-    /// </summary>
-    [Fact]
-    public void InsertNewProduct_DiscountNORangeDate()
-    {
-        //TODO 
-    }
 }

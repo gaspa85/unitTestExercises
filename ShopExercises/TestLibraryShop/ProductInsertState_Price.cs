@@ -2,7 +2,7 @@
 
 namespace TestLibraryShop;
 
-public class ProductInsert_Price
+public class ProductInsertState_Price
 {
     /// <summary>
     /// not possible to insert product with null price
@@ -13,12 +13,4 @@ public class ProductInsert_Price
         //TODO 
     }
 
-    /// <summary>
-    /// price must have rande date on every insert article
-    /// </summary>
-    [Fact]
-    public void InsertNewProduct_PriceNORangeDate()
-    {
-        //TODO 
-    }
 }
