@@ -4,6 +4,8 @@ namespace LibraryShop;
 
 public interface IManagerProduct
 {
+    public Guid createProduct();
+
     public void insertProductState(Guid idProduct, ProductState product);
 
     public ProductState getProductState(Guid idProduct, DateTime articleTime);

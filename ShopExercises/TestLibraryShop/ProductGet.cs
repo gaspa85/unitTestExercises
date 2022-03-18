@@ -8,7 +8,7 @@ public class ProductGet
     /// try to return product for specific time
     /// </summary>
     [Fact]
-    public void getProductByTime()
+    public void getProductState()
     {
         //TODO
     }
@@ -17,7 +17,7 @@ public class ProductGet
     /// try to return list of product for specific
     /// </summary>
     [Fact]
-    public void getProductAll()
+    public void getProduct()
     {
         //TODO
     }

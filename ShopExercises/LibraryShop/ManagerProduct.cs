@@ -4,12 +4,12 @@ namespace LibraryShop;
 
 public class ManagerProduct : IManagerProduct
 {
-    public void insertProductState(ProductState product)
+    public void insertProductState(Guid idProduct, ProductState product)
     {
         throw new NotImplementedException();
     }
 
-    public List<ProductState> getProductAll(Guid idProduct)
+    public Product getProduct(Guid idProduct)
     {
         throw new NotImplementedException();
     }

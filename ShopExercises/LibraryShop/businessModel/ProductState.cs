@@ -1,6 +1,6 @@
 ﻿namespace LibraryShop.businessModel;
 
-public class ProductState : TimeRange
+public class ProductState
 {
     public ProductState(
         string Name,
@@ -18,8 +18,6 @@ public class ProductState : TimeRange
         this.Price = Price;
         this.Discounts = Discounts;
         this.Ean = Ean;
-        this.Start = Start;
-        this.End = End;
     }
 
     public Guid Id { get; }
