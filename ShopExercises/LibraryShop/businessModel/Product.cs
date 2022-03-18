@@ -1,12 +1,8 @@
 ﻿namespace LibraryShop.businessModel;
 
-public class Product : TimeRange
+public class Product
 {
-    public Guid Id { get; set; }
-    public string Name { get; set; }
-    public DateTime? Expire { get; set; } = null!;
+    public Guid Id { get; } = Guid.NewGuid();
+    public Dictionary<TimeRange, ProductState> MapProductState = new Dictionary<TimeRange, ProductState>();
 
-    public float Price { get; set; }
-    public DiscountEnum Discounts { get; set; } = DiscountEnum.no_d;
-    public string Ean { get; set; }
 }
