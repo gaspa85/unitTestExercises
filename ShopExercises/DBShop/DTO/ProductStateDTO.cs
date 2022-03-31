@@ -9,4 +9,5 @@ public class ProductStateDTO
     public float Price { get; set; }
     public DiscountEnumDTO Discounts { get; set; }
     public string Ean { get; set; }
+    public TimeRangeDTO TimeRange { get; set; }
 }

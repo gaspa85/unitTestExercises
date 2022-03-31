@@ -8,5 +8,5 @@ public class ProductHistory
     }
     public Product Product { get; }
 
-    public Dictionary<TimeRange, ProductState> MapProductState { get; set; } = new Dictionary<TimeRange, ProductState>();
+    public List<ProductState> ListProductState { get; set; } = new List<ProductState>();
 }
