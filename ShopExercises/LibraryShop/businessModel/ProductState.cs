@@ -20,7 +20,7 @@ public class ProductState
     public Guid Id { get; } = Guid.NewGuid();
 
     public string Name { get; }
-    public DateTime? Expire { get; } = null!;
+    public DateTime? Expire { get; } = null;
     public float Price { get; }
     public DiscountEnum Discounts { get; } = DiscountEnum.no_d;
     public string Ean { get; }

@@ -7,6 +7,16 @@ public class OperationResult<T>
     public string MessageError { get; set; } = "";
     public Exception? Exception { get; set; }
 
+    public OperationResult<C> clone<C>(C c)
+    {
+        return new OperationResult<C>()
+        {
+            Result = c,
+            ReturnCode = this.ReturnCode,
+            MessageError = this.MessageError,
+            Exception = this.Exception
+        };
+    }
 }
 
 public enum ReturnCode

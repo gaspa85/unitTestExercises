@@ -1,15 +1,14 @@
 ﻿using dbshop.businessModel;
-using util;
 
 namespace DBShop;
 
 public interface IDBShopContext
 {
-    public Task createProduct(ProductDTO productEntity);
+    public Task createProductHistory(ProductHistoryDTO productHistoryDTO);
 
-    public Task insertProductState(ProductStateDTO product);
+    public Task insertProductState(Guid idProduct, ProductStateDTO productStateDTO);
 
-    public Task<OperationResult<ProductStateDTO>> getProductState(Guid idProduct, DateTime articleTime);
+    public Task<ProductStateDTO> getProductState(Guid idProduct, DateTime articleTime);
 
-    public Task<OperationResult<ProductDTO>> getProduct(Guid idProduct);
+    public Task<ProductHistoryDTO> getProductHistory(Guid idProduct);
 }

@@ -2,6 +2,16 @@
 
 public class TimeRange
 {
-    public DateTime Start { get; set; }
-    public DateTime End { get; set; }
+    public TimeRange(DateTime Start, DateTime End)
+    {
+        if (Start.CompareTo(End) <= 0)
+        {
+            throw new ArgumentException("start date is over end date");
+        }
+        this.Start = Start;
+        this.End = End;
+    }
+
+    public DateTime Start { get; }
+    public DateTime End { get; }
 }

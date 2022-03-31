@@ -1,5 +1,6 @@
 ﻿using DBShop;
 using LibraryShop.businessModel;
+using LibraryShop.mapper;
 
 namespace LibraryShop;
 
@@ -12,28 +13,87 @@ public class ManagerProduct : IManagerProduct
         this.db = db;
     }
 
-    public async Task<Guid> createProduct()
+    public async Task<OperationResult<Guid>> createProduct(ProductState ps)
     {
-        var p = new ProductHistory();
+        var result = new OperationResult<Guid>();
 
-        this.db.createProduct(p.toEntity());
+        try
+        {
+            var p = new Product(ps);
+            var ph = new ProductHistory(p);
 
-        return p.Id
+            await this.db.createProductHistory(ph.toDTO());
+
+            result.Result = p.Id;
+            result.ReturnCode = ReturnCode.Success;
+        }
+        catch (Exception ex)
+        {
+            result.Exception = ex;
+            result.MessageError = ex.Message;
+            result.ReturnCode = ReturnCode.DBError;
+        }
+
+        return result;
     }
 
-    public async Task insertProductState(Guid idProduct, ProductState product)
+    public async Task<OperationResult<Boolean>> insertProductState(Guid idProduct, ProductState ps)
     {
-        throw new NotImplementedException();
+        var result = new OperationResult<Boolean>();
+
+        try
+        {
+            await this.db.insertProductState(idProduct, ps.toDTO());
+            result.Result = true;
+            result.ReturnCode = ReturnCode.Success;
+        }
+        catch (Exception ex)
+        {
+            result.Exception = ex;
+            result.MessageError = ex.Message;
+            result.ReturnCode = ReturnCode.DBError;
+        }
+
+        return result;
     }
 
-    public async Task<OperationResult<ProductHistory>> getProduct(Guid idProduct)
+    public async Task<OperationResult<ProductHistory>> getProductHistory(Guid idProduct)
     {
-        throw new NotImplementedException();
+        var result = new OperationResult<ProductHistory>();
+
+        try
+        {
+            var psDTO = await this.db.getProductHistory(idProduct);
+            result.Result = psDTO.toModel();
+            result.ReturnCode = ReturnCode.Success;
+        }
+        catch (Exception ex)
+        {
+            result.Exception = ex;
+            result.MessageError = ex.Message;
+            result.ReturnCode = ReturnCode.DBError;
+        }
+
+        return result;
     }
 
     public async Task<OperationResult<ProductState>> getProductState(Guid idProduct, DateTime articleTime)
     {
-        throw new NotImplementedException();
-    }
+        var result = new OperationResult<ProductState>();
 
+        try
+        {
+            var psDTO = await this.db.getProductState(idProduct, articleTime);
+            result.Result = psDTO.toModel();
+            result.ReturnCode = ReturnCode.Success;
+        }
+        catch (Exception ex)
+        {
+            result.Exception = ex;
+            result.MessageError = ex.Message;
+            result.ReturnCode = ReturnCode.DBError;
+        }
+
+        return result;
+    }
 }

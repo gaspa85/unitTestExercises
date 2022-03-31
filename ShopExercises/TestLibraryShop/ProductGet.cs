@@ -14,12 +14,18 @@ public class ProductGet
     public void getProductState()
     {
         //setup
-        var p = new ProductHistory();
+        var ps = new ProductState("Sant'anna", null, 2.5f, "8503490421");
+        var p = new Product(ps);
+        var ph = new ProductHistory(p);
+
         var sd = new DateTime(2022, 01, 15);
         var ed = new DateTime(2022, 01, 20);
+        var tr = new TimeRange(sd, ed);
+        ph.MapProductState.Add(tr, ps);
         //TODO insert product and productstate to low level
 
-        var mp = new ManagerProduct();
+        //var mp = new ManagerProduct();
+        //mp.createProduct();
 
 
         //act
